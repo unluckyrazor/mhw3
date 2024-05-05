@@ -184,7 +184,7 @@ function prendiGiocoPerID() {
     method: "post",
     
     
-    body: " fields *; where id=(" + 39047 +"); limit 5;",
+    body: " fields *; where id=(" + gameIds + "); limit 5;",
     headers: {
         Accept: "application/json",
         "Client-ID": twitch_client_id,
@@ -197,7 +197,7 @@ function prendiGiocoPerID() {
 
 function handleData(games_by_date){
     for( let game of games_by_date) {
-        gameidList.push(game.id);
+        gameidList.push(game.game);
        
     }
     console.log(gameidList);
@@ -215,7 +215,7 @@ function stampaGiochi(lista_giochi){
         nome.textContent = gioco.name;
         let igdb_sect= document.querySelector(".igdb_coming_soon")
 
-        igdb_sect.textContent=gioco.name;
+        igdb_sect.appendChild(nome);    
     }
 }
 
