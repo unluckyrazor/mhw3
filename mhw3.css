@@ -301,7 +301,6 @@ p {
     display: flex;
     flex-direction: column;
     
-    
 }
 .show_content{
     display: flex;
@@ -318,7 +317,6 @@ p {
 
 .track_name{
     width: 300px;
-    
 }
 
 #tracce{
@@ -337,6 +335,9 @@ p {
     font-size: larger;
 }
 
+.igdb_coming_soon{
+    margin: 5px;
+}
 
 
 
